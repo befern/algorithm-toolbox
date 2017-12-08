@@ -2,7 +2,7 @@ package com.math.search;
 
 public class BinarySearch {
 
-    static public int[] binarySearchWithArrays(int[] arrayToBeSearched, int[] numbersToSearch) {
+    public static int[] binarySearchWithArrays(int[] arrayToBeSearched, int[] numbersToSearch) {
         int [] indexesFound = new int[numbersToSearch.length];
 
         for (int i = 0; i < numbersToSearch.length; i++)
