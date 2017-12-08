@@ -12,6 +12,7 @@ public class BinarySearchTest extends TestCase{
     public void setUp() {
         inputSearched = null;
         numbersToSearch = null;
+        foundIndexes = null;
     }
 
     public void testBinarySearchOneNumber() {

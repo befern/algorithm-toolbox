@@ -1,6 +1,5 @@
 package com.math.search;
 
-
 public class BinarySearch {
 
     static public int[] binarySearchWithArrays(int[] arrayToBeSearched, int[] numbersToSearch) {
@@ -20,8 +19,5 @@ public class BinarySearch {
 
         else if (key < arrayToBeSearched[middle]) return binarySearch(arrayToBeSearched, low, middle - 1, key);
         else return binarySearch(arrayToBeSearched, middle + 1, high, key);
-
-
-
     }
 }
