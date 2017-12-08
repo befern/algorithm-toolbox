@@ -15,10 +15,15 @@ public class BinarySearchTest extends TestCase{
     }
 
     public void testBinarySearchOneNumber() {
-        inputSearched = new int[]{1, 5, 8, 12, 13};
-        numbersToSearch = new int[]{8, 1, 23, 1, 11};
+        assertEquals(3, BinarySearch.binarySearch(new int[] {1, 2, 3, 4, 5}, 0, 5, 4));
+    }
 
-        assertEquals(BinarySearch.binarySearch(new int[] {1, 2, 3, 4, 5}, 3), 2);
+    public void testBinarySearchLargerNumber() {
+        assertEquals(-1, BinarySearch.binarySearch(new int[] {1, 2, 3, 4, 5}, 0, 4, 20));
+    }
+
+    public void testBinarySearchSmallerNumber() {
+        assertEquals(-1, BinarySearch.binarySearch(new int[] {2, 3, 4, 5}, 0, 5, 1));
     }
 
     public void testFiveNumbers() {
@@ -26,14 +31,14 @@ public class BinarySearchTest extends TestCase{
         numbersToSearch = new int[]{8, 1, 23, 1, 11};
         foundIndexes = new int[]{2, 0, -1, 0, -1};
 
-        Assert.assertArrayEquals(BinarySearch.binarySearchWithArrays(inputSearched, numbersToSearch), foundIndexes);
+        Assert.assertArrayEquals(foundIndexes, BinarySearch.binarySearchWithArrays(inputSearched, numbersToSearch));
     }
 
     public void testMaxAmountOfNumbers() {
-        inputSearched = ArrayStub.createMonotoneIncreasingArray(1, 1000000000, 1);
-        numbersToSearch = ArrayStub.createMonotoneIncreasingArray(1, 1000000000, 10000);
-        foundIndexes = ArrayStub.createMonotoneIncreasingArray(0, 1000000000, 10000);
+        inputSearched = ArrayStub.createMonotoneIncreasingArray(1, 10000000, 1);
+        numbersToSearch = ArrayStub.createMonotoneIncreasingArray(1, 90001, 100);
+        foundIndexes = ArrayStub.createMonotoneIncreasingArray(0, 90001, 100);
 
-        Assert.assertArrayEquals(BinarySearch.binarySearchWithArrays(inputSearched, numbersToSearch), foundIndexes);
+        Assert.assertArrayEquals(foundIndexes, BinarySearch.binarySearchWithArrays(inputSearched, numbersToSearch));
     }
 }

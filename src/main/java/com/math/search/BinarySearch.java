@@ -1,6 +1,5 @@
 package com.math.search;
 
-import java.util.Arrays;
 
 public class BinarySearch {
 
@@ -8,22 +7,21 @@ public class BinarySearch {
         int [] indexesFound = new int[numbersToSearch.length];
 
         for (int i = 0; i < numbersToSearch.length; i++)
-            indexesFound[i] = binarySearch(arrayToBeSearched, numbersToSearch[i]);
+            indexesFound[i] = binarySearch(arrayToBeSearched, 0, arrayToBeSearched.length -1, numbersToSearch[i]);
 
         return indexesFound;
     }
 
-    public static int binarySearch(int[] arrayToBeSearched, int search) {
-        int left = 0, right = arrayToBeSearched.length - 1;
-        int middle = left + right / 2;
+    public static int binarySearch(int[] arrayToBeSearched, int low, int high, int key) {
+        int middle = low + (high - low) / 2;
 
-        if (arrayToBeSearched.length == 1 && search != arrayToBeSearched[0]) return -1;
+        if (high < low) return - 1;
+        if (key == arrayToBeSearched[middle])return middle;
 
-        if (search == arrayToBeSearched[middle])
-            return middle;
-        else if (search > arrayToBeSearched[middle])
-            return binarySearch(Arrays.copyOfRange(arrayToBeSearched, middle + 1, right), search);
-        else
-            return binarySearch(Arrays.copyOfRange(arrayToBeSearched, left, middle - 1), search);
+        else if (key < arrayToBeSearched[middle]) return binarySearch(arrayToBeSearched, low, middle - 1, key);
+        else return binarySearch(arrayToBeSearched, middle + 1, high, key);
+
+
+
     }
 }
