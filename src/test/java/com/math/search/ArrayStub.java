@@ -1,13 +1,13 @@
 package com.math.search;
 
+import com.math.PositiveInteger;
+
 public class ArrayStub {
 
-    public static int[] createMonotoneIncreasingArray(int start, int end, int step) {
-        if (step <= 0) throw new IllegalArgumentException("Step cannot be lower than 1 in a monotone increasing array");
+    public static int[] createMonotoneIncreasingArray(int start, int end, PositiveInteger step) {
+        int[] resultArray = new int[(end - start) / step.getValue()];
 
-        int[] resultArray = new int[(end - start) / step];
-
-        for (int i = 0; i < resultArray.length; i++) resultArray[i] = i * step + start;
+        for (int i = 0; i < resultArray.length; i++) resultArray[i] = i * step.getValue() + start;
 
         return resultArray;
     }
