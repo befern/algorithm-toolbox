@@ -19,12 +19,12 @@ public class MajorityElementTest extends TestCase {
     }
 
     public void testNoMajorityMaxValues(){
-        int[] votes = ArrayStub.createMonotoneIncreasingArray(1_000_000, 1_050_000, addOne);
+        int[] votes = IntegerArrayStub.createMonotoneIncreasingArray(1_000_000, 1_050_000, addOne);
         assertFalse(MajorityElement.hasMajorityElement(votes));
     }
 
     public void testMajorityMaxValues(){
-        int[] votes = ArrayStub.createMonotoneIncreasingArray(1_000_000, 1_050_000, addOne);
+        int[] votes = IntegerArrayStub.createMonotoneIncreasingArray(1_000_000, 1_050_000, addOne);
 
         for (int i = 0; i < votes.length; i++)
             if (votes[i] > 1_024_999) votes[i] = 1_000_000;

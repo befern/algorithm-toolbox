@@ -1,5 +1,6 @@
 package com.math.search;
 
+import com.math.PositiveInteger;
 import org.junit.Assert;
 import junit.framework.TestCase;
 
@@ -36,9 +37,9 @@ public class BinarySearchTest extends TestCase{
     }
 
     public void testMaxAmountOfNumbers() {
-        inputSearched = ArrayStub.createMonotoneIncreasingArray(1, 10000000, 1);
-        numbersToSearch = ArrayStub.createMonotoneIncreasingArray(1, 90001, 100);
-        foundIndexes = ArrayStub.createMonotoneIncreasingArray(0, 90001, 100);
+        inputSearched = IntegerArrayStub.createMonotoneIncreasingArray(1, 10000000, new PositiveInteger(1));
+        numbersToSearch = IntegerArrayStub.createMonotoneIncreasingArray(1, 90001, new PositiveInteger(100));
+        foundIndexes = IntegerArrayStub.createMonotoneIncreasingArray(0, 90001, new PositiveInteger(100));
 
         Assert.assertArrayEquals(foundIndexes, BinarySearch.binarySearchWithArrays(inputSearched, numbersToSearch));
     }
