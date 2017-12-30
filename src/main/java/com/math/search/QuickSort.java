@@ -2,7 +2,7 @@ package com.math.search;
 
 import java.util.Random;
 
-public class Sorting {
+public class QuickSort {
     private static Random random = new Random();
 
     public static void randomizedQuickSort(int[] array, int left, int right) {
