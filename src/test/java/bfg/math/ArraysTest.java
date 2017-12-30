@@ -1,6 +1,5 @@
-package com.math.search;
+package bfg.math;
 
-import com.math.PositiveInteger;
 import junit.framework.TestCase;
 import org.junit.Assert;
 

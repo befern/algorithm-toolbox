@@ -1,6 +1,7 @@
-package com.math.search;
+package bfg.math.divide_and_conquer;
 
-import com.math.PositiveInteger;
+import bfg.math.PositiveInteger;
+import bfg.math.IntegerArrayStub;
 import junit.framework.TestCase;
 import org.junit.Assert;
 

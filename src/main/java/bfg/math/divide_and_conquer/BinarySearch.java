@@ -1,4 +1,4 @@
-package com.math.search;
+package bfg.math.divide_and_conquer;
 
 public class BinarySearch {
 

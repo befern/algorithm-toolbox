@@ -1,6 +1,5 @@
-package com.math.search;
+package bfg.math;
 
-import com.math.PositiveInteger;
 import java.util.Arrays;
 
 public class IntegerArrayStub{

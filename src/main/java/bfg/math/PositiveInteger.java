@@ -1,4 +1,4 @@
-package com.math;
+package bfg.math;
 
 public class PositiveInteger {
     private int value;
