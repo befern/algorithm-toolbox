@@ -42,4 +42,12 @@ public class MergeSortTest extends TestCase{
 
         Assert.assertArrayEquals(resultArray, originalArray);
     }
+
+    public void testSortMaxDescendingArray(){
+        originalArray = IntegerArrayStub.createMonotoneDecreasingArray(1_000_000_000, 10_000, new PositiveInteger(10_000));
+        int[] resultArray = IntegerArrayStub.createMonotoneIncreasingArray(10_000, 1_000_000_000, new PositiveInteger(10_000));
+        sorter.sort(originalArray);
+
+        Assert.assertArrayEquals(resultArray, originalArray);
+    }
 }

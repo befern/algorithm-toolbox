@@ -6,9 +6,19 @@ import java.util.Arrays;
 public class IntegerArrayStub{
 
     public static int[] createMonotoneIncreasingArray(int start, int end, PositiveInteger step) {
-        int[] resultArray = new int[(end - start) / step.getValue()];
+        int[] resultArray = new int[(end - start) / step.getValue() + 1];
 
-        for (int i = 0; i < resultArray.length; i++) resultArray[i] = i * step.getValue() + start;
+        for (int i = 0; i < resultArray.length; i++)
+            resultArray[i] = i * step.getValue() + start;
+
+        return resultArray;
+    }
+
+    public static int[] createMonotoneDecreasingArray(int start, int end, PositiveInteger step) {
+        int[] resultArray = new int[(start - end) / step.getValue() + 1];
+
+        for (int i = 0; i < resultArray.length; i++)
+            resultArray[i] = start - i * step.getValue();
 
         return resultArray;
     }
@@ -20,4 +30,6 @@ public class IntegerArrayStub{
 
         return monotoneArray;
     }
+
+
 }
