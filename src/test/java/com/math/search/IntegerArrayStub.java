@@ -5,22 +5,12 @@ import java.util.Arrays;
 
 public class IntegerArrayStub{
 
-    public static int[] createMonotoneIncreasingArray(int start, int end, PositiveInteger step) {
-        int[] resultArray = new int[(end - start) / step.getValue() + 1];
-
-        for (int i = 0; i < resultArray.length; i++)
-            resultArray[i] = i * step.getValue() + start;
-
-        return resultArray;
+    public static int[] createMonotoneIncreasingArray(int start, int maxEnd, PositiveInteger step) {
+        return createArray(start, maxEnd, step.getValue());
     }
 
-    public static int[] createMonotoneDecreasingArray(int start, int end, PositiveInteger step) {
-        int[] resultArray = new int[(start - end) / step.getValue() + 1];
-
-        for (int i = 0; i < resultArray.length; i++)
-            resultArray[i] = start - i * step.getValue();
-
-        return resultArray;
+    public static int[] createMonotoneDecreasingArray(int start, int maxEnd, PositiveInteger step) {
+        return createArray(start, maxEnd, -step.getValue());
     }
 
     public static int[] createEqualElementsArray(int integer, PositiveInteger length) {
@@ -31,5 +21,12 @@ public class IntegerArrayStub{
         return monotoneArray;
     }
 
+    private static int[] createArray(int start, int maxEnd, int step){
+        int[] resultArray = new int[(maxEnd - start) / step + 1];
 
+        for (int i = 0; i < resultArray.length; i++)
+            resultArray[i] = i * step + start;
+
+        return resultArray;
+    }
 }
