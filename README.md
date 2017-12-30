@@ -26,3 +26,4 @@ instead of the format expected by the course.
 ## Built With
 
 * [Maven](https://maven.apache.org/) - Dependency Management
+* [Travis CI] (https://travis-ci.org/) - Continuous Integration
