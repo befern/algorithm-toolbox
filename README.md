@@ -1,8 +1,10 @@
 # Algorithm Toolbox
 
-Following the excercises of Coursera's Algorithm Toolbox course, by University of California, San Diego & National
-Research University Higher School of Economics. This project contains solutions for the assigments, but as a library
+Following the excercises of Coursera's Algorithm Toolbox course (by University of California, San Diego & National
+Research University Higher School of Economics), this project contains solutions for the assigments, but as a library
 instead of the format expected by the course.
+
+Tests cover questions as well as major corner cases
 
 ## Greedy Algorithms
 
@@ -20,6 +22,7 @@ instead of the format expected by the course.
 ### Finding the majority in a vote
 ### Quick Sort (3-way partition)
 ### Merge Sort
+### 2D Sort (Segments and Points Sorting problems)
 
 
 
