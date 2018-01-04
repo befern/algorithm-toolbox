@@ -2,6 +2,7 @@ package bfg.math.greedy_algorithms;
 
 
 import bfg.math.ListStub;
+import bfg.math.Segment;
 import junit.framework.TestCase;
 
 import java.util.ArrayList;

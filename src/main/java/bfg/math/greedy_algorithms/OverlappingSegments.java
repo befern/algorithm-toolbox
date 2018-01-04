@@ -1,5 +1,6 @@
 package bfg.math.greedy_algorithms;
 
+import bfg.math.Segment;
 import java.util.ArrayList;
 import java.util.Comparator;
 import java.util.List;
@@ -10,7 +11,6 @@ public class OverlappingSegments {
     public OverlappingSegments(List<Segment> segments) {
         segments.sort(Comparator.comparing(Segment::getEnd));
         this.segments = segments;
-
     }
 
     public List<Integer> optimalCoveringPoints() {

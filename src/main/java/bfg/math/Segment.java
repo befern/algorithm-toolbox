@@ -1,4 +1,4 @@
-package bfg.math.greedy_algorithms;
+package bfg.math;
 
 public class Segment {
     int start;
@@ -8,6 +8,8 @@ public class Segment {
         this.start = start;
         this.end = end;
     }
+
+    public int getStart() { return start; }
 
     public int getEnd() { return end; }
 

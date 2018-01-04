@@ -12,4 +12,14 @@ public class ListStub extends ArrayList {
 
         return list;
     }
+
+    public static List<Integer> createIntegerListfromIntArray(int[] intArray){
+        List<Integer> integerList = new ArrayList<Integer>();
+
+        for (int index = 0; index < intArray.length; index++) {
+            integerList.add(intArray[index]);
+        }
+
+        return integerList;
+    }
 }
