@@ -35,7 +35,6 @@ public class SegmentSort {
         }
     }
 
-
     private static class OrderByEndingPoint implements Comparator<Segment> {
 
         @Override

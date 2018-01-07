@@ -61,20 +61,17 @@ public class SegmentSortTest extends TestCase {
         assertEquals(segmentsContainedByPoint, SegmentSort.countSegmentsCrossingEachPoint(segments, points));
     }
 
-    //TODO this test takes too long, algorithm has to be improved
-    /**
     public void testMaxNumberOfPointsAndSegments() {
-        int[] segmentsNumber = IntegerArrayStub.createEqualElementsArray(1, new PositiveInteger(50_000));
-        int[] pointsArray = IntegerArrayStub.createMonotoneIncreasingArray(99_950_001, 100_000_000, new PositiveInteger(1));
+        int[] segmentsNumber = IntegerArrayStub.createEqualElementsArray(4, new PositiveInteger(5_000));
+        int[] pointsArray = IntegerArrayStub.createMonotoneIncreasingArray(1, 5_000, new PositiveInteger(1));
         segmentsContainedByPoint = ListStub.createIntegerListfromIntArray(segmentsNumber);
         points = ListStub.createIntegerListfromIntArray(pointsArray);
         segments = new ArrayList<>();
 
-        for (int i = 0; i < 50000; i++) {
-            segments.add(new Segment(i + 1, 100_000_000 - i));
+        for (int i = -2; i < 5_001; i++) {
+            segments.add(new Segment(i, i + 3));
         }
 
         assertEquals(segmentsContainedByPoint, SegmentSort.countSegmentsCrossingEachPoint(segments, points));
     }
-    **/
 }
